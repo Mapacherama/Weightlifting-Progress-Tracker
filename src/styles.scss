@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-@import '../tailwind.scss';
-@import "primeng/resources/themes/bootstrap4-dark-blue/theme.css";
-@import "primeng/resources/primeng.css";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import "../node_modules/primeng/resources/themes/bootstrap4-dark-blue/theme.css";
+@import "../node_modules/primeng/resources/primeng.css";

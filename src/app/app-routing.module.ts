@@ -10,7 +10,7 @@ import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
 import { AuthGuard } from './services/auth-guard.service';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'workout-selection', component: WorkoutSelectionComponent },
   { path: 'reps-sets-input', component: RepsSetsInputComponent },

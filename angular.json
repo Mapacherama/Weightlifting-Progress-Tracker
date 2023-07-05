@@ -30,7 +30,6 @@
               "src/assets"
             ],
             "styles": [
-              "./tailwind.scss",
               "src/styles.scss",
               "./node_modules/primeicons/primeicons.css",
               "./node_modules/primeng/resources/themes/bootstrap4-dark-blue/theme.css",
@@ -101,7 +100,6 @@
             ],
             "styles": [
               "src/styles.scss",
-              "./tailwind.scss",
               "./node_modules/primeicons/primeicons.css",
               "./node_modules/primeng/resources/themes/bootstrap4-dark-blue/theme.css",
               "./node_modules/primeng/resources/primeng.min.css"

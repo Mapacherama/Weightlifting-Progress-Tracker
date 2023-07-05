@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HeaderComponent } from './components/header/header.component';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
@@ -19,7 +20,8 @@ import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
     WeightTrackingComponent,
     NutritionManagementComponent,
     SettingsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

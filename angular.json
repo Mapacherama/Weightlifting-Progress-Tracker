@@ -30,13 +30,15 @@
               "src/assets"
             ],
             "styles": [
+              "./tailwind.scss",
               "src/styles.scss",
-              "primevue/resources/primevue.min.css",
-              "primevue/resources/themes/bootstrap4-dark-blue/theme.css"
+              "./node_modules/primeicons/primeicons.css",
+              "./node_modules/primeng/resources/themes/bootstrap4-dark-blue/theme.css",
+              "./node_modules/primeng/resources/primeng.min.css"
             ],
+
             "scripts": [
-              "primevue/primevue.min.js",
-              "primeicons/primeicons.js"
+
             ]
           },
           "configurations": {
@@ -99,12 +101,13 @@
             ],
             "styles": [
               "src/styles.scss",
-              "primevue/resources/primevue.min.css",
-              "primevue/resources/themes/bootstrap4-dark-blue/theme.css"
+              "./tailwind.scss",
+              "./node_modules/primeicons/primeicons.css",
+              "./node_modules/primeng/resources/themes/bootstrap4-dark-blue/theme.css",
+              "./node_modules/primeng/resources/primeng.min.css"
             ],
             "scripts": [
-              "primevue/primevue.min.js",
-              "primeicons/primeicons.js"
+
             ]
           }
         }

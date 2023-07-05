@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
@@ -9,7 +8,7 @@ import { RepsSetsInputComponent } from './reps-sets-input/reps-sets-input.compon
 import { WeightTrackingComponent } from './weight-tracking/weight-tracking.component';
 import { NutritionManagementComponent } from './nutrition-management/nutrition-management.component';
 import { SettingsComponent } from './settings/settings.component';
-import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +19,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     WeightTrackingComponent,
     NutritionManagementComponent,
     SettingsComponent,
-    PagenotfoundComponent
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

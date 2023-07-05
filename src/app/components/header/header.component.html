@@ -1,0 +1,15 @@
+<header class="bg-blue-900 shadow-lg text-white shadow-gray-900 flex justify-between py-4">
+  <div class="flex-shrink-0 px-4 flex items-center">
+    <a routerLink="/">
+      <img
+        src="../assets/images/fuga-cloud-white-transparent.png"
+        alt="Logo"
+        class="h-10 ml-4 border border-transparent hover:border-white"
+      />
+    </a>
+  </div>
+  <div class="flex justify-end mr-3" *ngIf="router.url !== '/login'">
+    <div class="col-6 flex justify-end">
+    </div>
+  </div>
+</header>

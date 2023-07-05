@@ -30,9 +30,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "primevue/resources/primevue.min.css",
+              "primevue/resources/themes/bootstrap4-dark-blue/theme.css"
             ],
-            "scripts": []
+            "scripts": [
+              "primevue/primevue.min.js",
+              "primeicons/primeicons.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -93,9 +98,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "primevue/resources/primevue.min.css",
+              "primevue/resources/themes/bootstrap4-dark-blue/theme.css"
             ],
-            "scripts": []
+            "scripts": [
+              "primevue/primevue.min.js",
+              "primeicons/primeicons.js"
+            ]
           }
         }
       }

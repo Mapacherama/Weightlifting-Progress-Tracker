@@ -11,6 +11,16 @@ import { NutritionManagementComponent } from './nutrition-management/nutrition-m
 import { SettingsComponent } from './settings/settings.component';
 import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
 
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faBell, faTimes, faUser, faMoneyBill, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { DesktopMenuComponent } from './components/desktop-menu/desktop-menu.component';
+
+// Add icons to the library
+library.add(fas, fab);
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +32,7 @@ import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
     SettingsComponent,
     PageNotFoundComponent,
     HeaderComponent,
+    DesktopMenuComponent,
   ],
   imports: [
     BrowserModule,

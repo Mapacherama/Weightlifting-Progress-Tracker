@@ -11,7 +11,7 @@ import { AuthGuard } from './services/auth-guard.service';
 
 const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'workout-selection', component: WorkoutSelectionComponent },
   { path: 'reps-sets-input', component: RepsSetsInputComponent },
   { path: 'weight-tracking', component: WeightTrackingComponent },

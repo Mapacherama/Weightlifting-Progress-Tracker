@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, OnInit } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HeaderComponent } from './components/header/header.component';
 import { AppComponent } from './app.component';
@@ -11,6 +11,16 @@ import { NutritionManagementComponent } from './nutrition-management/nutrition-m
 import { SettingsComponent } from './settings/settings.component';
 import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
 
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faBell, faTimes, faUser, faMoneyBill, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { NotificationBellComponent } from './components/notification-bell/notification-bell.component';
+
+// Add icons to the library
+library.add(fas, fab);
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,12 +32,21 @@ import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
     SettingsComponent,
     PageNotFoundComponent,
     HeaderComponent,
+    NotificationBellComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule implements OnInit{
+  constructor(private library: FaIconLibrary) {
+    library.addIcons(faBell, faTimes, faUser, faMoneyBill, faTrash);
+  }
+  ngOnInit(): void {
+    this.library.addIconPacks(fas, fab);
+  }
+}

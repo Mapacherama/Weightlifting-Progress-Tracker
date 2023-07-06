@@ -5,9 +5,12 @@
         class="rounded-lg h-100 w-48"
       />
   </div>
-  <div class="flex justify-end mr-3" *ngIf="router.url !== '/login'">
+  <div class="flex justify-end mr-4" *ngIf="router.url !== '/login'">
     <div class="col-6 flex justify-end">
+      <div class="flex items-center">
+        <div class="flex-grow"></div> <!-- Spacer to push the following element to the right -->
+        <app-notification-bell></app-notification-bell>
+      </div>
     </div>
-    <app-notification-bell></app-notification-bell>
   </div>
 </header>

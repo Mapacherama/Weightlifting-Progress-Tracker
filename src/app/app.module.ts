@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, OnInit } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HeaderComponent } from './components/header/header.component';
 import { AppComponent } from './app.component';
@@ -17,6 +17,8 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faBell, faTimes, faUser, faMoneyBill, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { DesktopMenuComponent } from './components/desktop-menu/desktop-menu.component';
+import { NotificationBellComponent } from './components/notification-bell/notification-bell.component';
+
 
 // Add icons to the library
 library.add(fas, fab);
@@ -33,12 +35,21 @@ library.add(fas, fab);
     PageNotFoundComponent,
     HeaderComponent,
     DesktopMenuComponent,
+    NotificationBellComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule implements OnInit{
+  constructor(private library: FaIconLibrary) {
+    library.addIcons(faBell, faTimes, faUser, faMoneyBill, faTrash);
+  }
+  ngOnInit(): void {
+    this.library.addIconPacks(fas, fab);
+  }
+}

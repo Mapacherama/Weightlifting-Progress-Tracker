@@ -21,6 +21,8 @@ yarn-error.log*
 *.sln
 *.sw?
 *.bak
+*.pack
+*.pack.old
 
 # Environment Files
 .env
@@ -34,6 +36,12 @@ yarn-error.log*
 .Trashes
 ehthumbs.db
 Thumbs.db
+
 *.old
 *.pack
 *.pack
+*.old
+*.json
+*.pack
+*.old
+

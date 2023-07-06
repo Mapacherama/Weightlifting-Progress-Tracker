@@ -1,0 +1,24 @@
+<div class="relative z-50">
+  <fa-icon class="bigger-size cursor-pointer" [icon]="['fas', 'bell']" (click)="toggleMessagesPanel()"></fa-icon>
+  <div class="absolute top-7 right-5 p-4 bg-white border border-gray-300 rounded-md shadow-md" *ngIf="showMessages">
+    <ul *ngIf="!emptyMessages">
+      <li class="text-blue-900 inline-block" *ngFor="let message of messages; let i = index">
+        <div class="mr-auto flex justify-end cursor-pointer" (click)="deleteMessage(message.id)">
+          <i class="fa fa-times"></i>
+        </div>
+        <div class="border-b border-gray-400 mb-2 w-full whitespace-nowrap">
+          <i class="fa mr-2 bigger-size" [ngClass]="message.icon"></i>
+          {{ message.text }}
+        </div>
+      </li>
+    </ul>
+    <ul *ngIf="emptyMessages">
+      <li class="text-blue-900 inline-block">
+        <p>No messages</p>
+      </li>
+    </ul>
+  </div>
+  <span *ngIf="hasNewMessages"
+    class="absolute top-0 right-0 -mt-1 -mr-1 bg-orange-500 rounded-full text-white w-4 h-4 text-xs flex items-center justify-center p-2">
+    {{ notificationCount }}</span>
+</div>

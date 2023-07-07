@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'reps-sets-input', component: RepsSetsInputComponent },
   { path: 'weight-tracking', component: WeightTrackingComponent },
   { path: 'nutrition-management', component: NutritionManagementComponent },
-  { path: 'settings', component: SettingsComponent, canActivate: [AuthGuard] },
+  { path: 'settings', component: SettingsComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 

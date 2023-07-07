@@ -15,7 +15,7 @@ import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontaweso
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faBell, faTimes, faUser, faMoneyBill, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faBell, faTimes, faUser, faMoneyBill, faTrash, faHome, faDumbbell, faSortNumericUp, faWeight, faAppleAlt, faCog } from '@fortawesome/free-solid-svg-icons';
 import { DesktopMenuComponent } from './components/desktop-menu/desktop-menu.component';
 import { NotificationBellComponent } from './components/notification-bell/notification-bell.component';
 
@@ -47,7 +47,7 @@ library.add(fas, fab);
 })
 export class AppModule implements OnInit{
   constructor(private library: FaIconLibrary) {
-    library.addIcons(faBell, faTimes, faUser, faMoneyBill, faTrash);
+    library.addIcons(faBell, faTimes, faUser, faMoneyBill, faTrash, faHome, faDumbbell, faSortNumericUp, faWeight, faAppleAlt, faCog);
   }
   ngOnInit(): void {
     this.library.addIconPacks(fas, fab);

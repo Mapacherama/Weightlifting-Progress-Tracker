@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import "../node_modules/primeng/resources/themes/bootstrap4-dark-blue/theme.css";
+@import "../node_modules/primeng/resources/primeng.css";
+
+.bigger-size {
+  font-size: 2rem !important;
+}
+
+.desktop-menu {
+  position: fixed;
+  top: 9rem;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  background-color: #f3f4f6;
+  border-right: 1px solid #e5e7eb;
+  overflow-y: auto;
+}
+
+.flex-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  flex-direction: column;
+
+  .pi {
+    font-size: 2rem;
+    color: white;
+  }
+}
+
+.desktop-menu-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@media only screen and (min-width: 992px) {
+  .flex-col {
+    flex-direction: row;
+  }
+
+  .flex-1 {
+    margin-left: 64px;
+  }
+}

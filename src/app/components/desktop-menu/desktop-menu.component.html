@@ -1,0 +1,55 @@
+<div class="flex flex-col h-screen bg-yellow-300 justify-center w-1/5 absolute">
+  <div class="justify-start pt-4">
+      <button
+        (click)="router.navigate(['/'])"
+        class="p-link layout-topbar-button desktop-menu-button"
+      >
+        <fa-icon [icon]="['fas', 'home']" class="bigger-size"></fa-icon>
+        <span class="ml-2">Home</span>
+      </button>
+
+      <button (click)="router.navigate(['/workout-selection'])" class="p-link layout-topbar-button desktop-menu-button ml-2">
+        <fa-icon [icon]="['fas', 'dumbbell']" class="bigger-size"></fa-icon>
+        <span class="ml-2">Workout Selection</span>
+      </button>
+
+      <button
+        (click)="router.navigate(['/reps-sets-input'])"
+        class="p-link layout-topbar-button desktop-menu-button ml-2"
+      >
+        <fa-icon [icon]="['fas', 'sort-numeric-up']" class="bigger-size"></fa-icon>
+        <span class="ml-2">Reps or Sets input</span>
+      </button>
+
+      <button
+        (click)="router.navigate(['/weight-tracking'])"
+        class="p-link layout-topbar-button desktop-menu-button ml-2"
+      >
+        <fa-icon [icon]="['fas', 'weight']" class="bigger-size"></fa-icon>
+        <span class="ml-2">Weight tracker</span>
+      </button>
+      <button
+        (click)="router.navigate(['/nutrition-management'])"
+        class="p-link layout-topbar-button desktop-menu-button ml-2"
+      >
+        <fa-icon [icon]="['fas', 'apple-alt']" class="bigger-size"></fa-icon>
+        <span class="ml-2">Nutrition Management</span>
+      </button>
+      <button
+        (click)="router.navigate(['/settings'])"
+        class="p-link layout-topbar-button desktop-menu-button ml-2"
+      >
+        <fa-icon [icon]="['fas', 'cog']" class="bigger-size"></fa-icon>
+        <span class="ml-2">Settings</span>
+      </button>
+      <div class="border-t-4 border-blue-800 mt-11">
+        <button
+          (click)="router.navigate(['/login'])"
+          class="mt-4 w-60 h-20 text-lg bg-blue-800 bg-opacity-75 hover:bg-purple-700 border border-white hover:text-yellow-100 hover:border-yellow-400 font-semibold rounded-md text-white !important"
+          type="submit"
+        >
+          Log out
+        </button>
+      </div>
+  </div>
+</div>

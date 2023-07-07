@@ -1,0 +1,18 @@
+<header class="bg-blue-900 shadow-lg text-white shadow-gray-900 flex justify-between py-4 h-100">
+  <div class="flex-shrink-0 px-4 flex items-center">
+      <img
+        src="../../../assets/images/powersurge.png"
+        class="rounded-lg h-100 w-48"
+      />
+  </div>
+  <div class="flex justify-end mr-4" *ngIf="router.url !== '/login'">
+    <div class="col-6 flex justify-end">
+      <div class="flex items-center">
+        <div class="flex-grow"></div> <!-- Spacer to push the following element to the right -->
+        <app-notification-bell></app-notification-bell>
+      </div>
+    </div>
+  </div>
+</header>
+
+<app-desktop-menu></app-desktop-menu>

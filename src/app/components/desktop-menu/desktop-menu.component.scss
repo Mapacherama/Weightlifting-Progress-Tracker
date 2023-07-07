@@ -1,0 +1,12 @@
+.flex-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  flex-direction: column;
+
+
+  .pi {
+    font-size: 2rem;
+    color: white;
+  }
+}

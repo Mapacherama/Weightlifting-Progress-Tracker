@@ -1,2 +1,7 @@
 <app-header></app-header>
-<router-outlet></router-outlet>
+<div class="relative">
+  <app-desktop-menu></app-desktop-menu>
+  <div class="absolute top-0 left-0 ml-96">
+    <router-outlet></router-outlet>
+  </div>
+</div>

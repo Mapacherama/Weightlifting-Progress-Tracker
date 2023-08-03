@@ -1,12 +1,14 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import axios from 'axios';
+import { ErrorService } from '../helpers/error.service';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
-
+export class UserService implements OnInit {
+  public errors: any = {};
   private userSubject = new BehaviorSubject<any>(null);
   public user$ = this.userSubject.asObservable();
 
@@ -28,8 +30,12 @@ export class UserService {
   });
   public errors$ = this.errorsSubject.asObservable()
 
-  constructor() { }
-
+  constructor(private errorService: ErrorService, private router: Router) { }
+  ngOnInit() {
+    this.errors$.subscribe((errors) => {
+      this.errors = errors;
+    });
+  }
 
   updateUser(user: any) {
     this.userSubject.next(user);
@@ -64,20 +70,18 @@ export class UserService {
 
     try {
       const response = await axios.post('/graphql/', { headers, query });
-      this.errors$.signIn = this.errorHandler(response);
+      this.errors.signIn = this.errorService.errorHandler(response);
 
-      if (this.errors$.signIn == null) {
+      if (this.errors.signIn == null) {
         const tokenAuth = response.data.tokenAuth;
         localStorage.setItem('email', email);
-        this.stateStore.setToken(tokenAuth.token, tokenAuth.payload.exp);
         this.router.navigate([`/${redirectUrl}`]);
       }
-    } catch (error) {
+    } catch (error: any) {
       this.errors.signIn = [error.message];
     }
 
     localStorage.removeItem('redirectUrl');
-    this.fetchCurrentUser();
   }
 
 }

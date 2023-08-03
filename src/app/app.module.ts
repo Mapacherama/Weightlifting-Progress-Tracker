@@ -20,6 +20,7 @@ import { faBell, faTimes, faUser, faMoneyBill, faTrash, faHome, faDumbbell, faSo
 import { DesktopMenuComponent } from './components/desktop-menu/desktop-menu.component';
 import { NotificationBellComponent } from './components/notification-bell/notification-bell.component';
 import { HeroComponent } from './components/hero/hero.component';
+import { LoginComponent } from './login/login.component';
 
 
 // Add icons to the library
@@ -39,6 +40,7 @@ library.add(fas, fab);
     DesktopMenuComponent,
     NotificationBellComponent,
     HeroComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

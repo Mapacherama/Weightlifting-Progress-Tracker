@@ -22,6 +22,7 @@ import { NotificationBellComponent } from './components/notification-bell/notifi
 import { HeroComponent } from './components/hero/hero.component';
 import { LoginComponent } from './login/login.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 // Add icons to the library
@@ -43,6 +44,7 @@ library.add(fas, fab);
     HeroComponent,
     LoginComponent,
     LandingPageComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,

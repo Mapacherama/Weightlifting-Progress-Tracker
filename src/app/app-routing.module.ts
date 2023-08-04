@@ -10,9 +10,11 @@ import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
 import { AuthGuard } from './services/auth-guard.service';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: HomeComponent },
+  { path: 'signup', component: SignupComponent },
   { path: 'landing', component: LandingPageComponent },
   { path: '', redirectTo: '/landing', pathMatch: 'full' },
   { path: 'workout-selection', component: WorkoutSelectionComponent },

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-hero',
@@ -10,10 +11,11 @@ export class HeroComponent implements OnInit {
   subheadline = 'Track your weightlifting workouts, nutrition, and overall progress with our powerful Angular-based platform.';
   ctaText = 'Get Started';
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
-  yourFunction(): void {
+  navigateToSignUp(): void {
+    this.router.navigateByUrl('/signup');
   }
 }

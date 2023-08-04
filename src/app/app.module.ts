@@ -21,6 +21,7 @@ import { DesktopMenuComponent } from './components/desktop-menu/desktop-menu.com
 import { NotificationBellComponent } from './components/notification-bell/notification-bell.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { LoginComponent } from './login/login.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 
 // Add icons to the library
@@ -41,6 +42,7 @@ library.add(fas, fab);
     NotificationBellComponent,
     HeroComponent,
     LoginComponent,
+    LandingPageComponent,
   ],
   imports: [
     BrowserModule,

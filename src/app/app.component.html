@@ -1,7 +1,7 @@
 <app-header></app-header>
-<div class="relative">
-  <app-desktop-menu *ngIf="!isLoginPage()"></app-desktop-menu>
-  <div [ngClass]="{ 'absolute top-0 left-0 ml-96': !isLoginPage() }">
+<app-desktop-menu *ngIf="!isLoginPage()"></app-desktop-menu>
+<div class="flex flex-row">
+  <div [ngClass]="{'flex flex-grow': !isLoginPage() }">
     <router-outlet></router-outlet>
   </div>
 </div>

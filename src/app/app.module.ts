@@ -2,6 +2,7 @@ import { NgModule, OnInit } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HeaderComponent } from './components/header/header.component';
 import { AppComponent } from './app.component';
+import { ButtonModule } from 'primeng/button';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { WorkoutSelectionComponent } from './workout-selection/workout-selection.component';
@@ -18,6 +19,9 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faBell, faTimes, faUser, faMoneyBill, faTrash, faHome, faDumbbell, faSortNumericUp, faWeight, faAppleAlt, faCog } from '@fortawesome/free-solid-svg-icons';
 import { DesktopMenuComponent } from './components/desktop-menu/desktop-menu.component';
 import { NotificationBellComponent } from './components/notification-bell/notification-bell.component';
+import { HeroComponent } from './components/hero/hero.component';
+import { LoginComponent } from './login/login.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 
 // Add icons to the library
@@ -36,9 +40,13 @@ library.add(fas, fab);
     HeaderComponent,
     DesktopMenuComponent,
     NotificationBellComponent,
+    HeroComponent,
+    LoginComponent,
+    LandingPageComponent,
   ],
   imports: [
     BrowserModule,
+    ButtonModule,
     AppRoutingModule,
     FontAwesomeModule,
   ],

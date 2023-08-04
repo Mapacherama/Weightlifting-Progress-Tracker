@@ -5,6 +5,23 @@
 @import "../node_modules/primeng/resources/themes/bootstrap4-dark-blue/theme.css";
 @import "../node_modules/primeng/resources/primeng.css";
 
+// Import Roboto Condensed
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+// Import Poppins
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+// Fonts
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+p, span, div {
+  font-family: 'Poppins', sans-serif;
+}
+
 .bigger-size {
   font-size: 2rem !important;
 }
@@ -39,7 +56,7 @@
 }
 
 @media only screen and (min-width: 992px) {
-  .flex-col {
+  .flex-col-desktop-menu {
     flex-direction: row;
   }
 
@@ -49,5 +66,5 @@
 }
 
 body {
-  overflow-y: hidden;
+  overflow-x: hidden;
 }

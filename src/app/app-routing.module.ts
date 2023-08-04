@@ -6,17 +6,21 @@ import { RepsSetsInputComponent } from './reps-sets-input/reps-sets-input.compon
 import { WeightTrackingComponent } from './weight-tracking/weight-tracking.component';
 import { NutritionManagementComponent } from './nutrition-management/nutrition-management.component';
 import { SettingsComponent } from './settings/settings.component';
+import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
 import { AuthGuard } from './services/auth-guard.service';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/', pathMatch: 'full' },
-  { path: '', component: HomeComponent },
+  { path: 'dashboard', component: HomeComponent },
+  { path: 'landing', component: LandingPageComponent },
+  { path: '', redirectTo: '/landing', pathMatch: 'full' },
   { path: 'workout-selection', component: WorkoutSelectionComponent },
   { path: 'reps-sets-input', component: RepsSetsInputComponent },
   { path: 'weight-tracking', component: WeightTrackingComponent },
   { path: 'nutrition-management', component: NutritionManagementComponent },
   { path: 'settings', component: SettingsComponent },
+  { path: 'login', component: LoginComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 
